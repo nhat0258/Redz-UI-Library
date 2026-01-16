@@ -1,0 +1,43 @@
+local redzlib = loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.lua"
+))()
+
+local Window = redzlib:MakeWindow({
+    Title = "Redz UI",
+    SubTitle = "Basic Example",
+    SaveFolder = "RedzConfig"
+})
+
+local MainTab = Window:MakeTab({ "Main", "Home" })
+
+MainTab:AddButton({
+    "Print Message",
+    function()
+        print("Redz-UI Basic Example")
+    end
+})
+
+MainTab:AddToggle({
+    Name = "Example Toggle",
+    Description = "Simple toggle example",
+    Default = false,
+    Callback = function(Value)
+        print("Toggle state:", Value)
+    end
+})
+
+MainTab:AddSlider({
+    Name = "WalkSpeed",
+    Min = 8,
+    Max = 32,
+    Increase = 1,
+    Default = 16,
+    Callback = function(Value)
+        local player = game.Players.LocalPlayer
+        local char = player.Character or player.CharacterAdded:Wait()
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        if hum then
+            hum.WalkSpeed = Value
+        end
+    end
+})
