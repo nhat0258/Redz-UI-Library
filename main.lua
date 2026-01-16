@@ -1,4 +1,8 @@
---[[ Redz UI Remix By Nhat0258]]--
+--[[ 
+Redz-UI Remix
+Author: nhat0258
+Inspired by Redz Hub (private project)
+]]
 local MarketplaceService = game:GetService("MarketplaceService")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
