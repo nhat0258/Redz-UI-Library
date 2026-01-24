@@ -1,4 +1,4 @@
-local redzlib = loadstring(game:HttpGet(
+local Library = loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.lua"
 ))()
 
@@ -77,3 +77,4 @@ Player.CharacterAdded:Connect(function(char)
         char.Humanoid.WalkSpeed = State.SpeedValue
     end
 end)
+
