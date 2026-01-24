@@ -9,4 +9,5 @@ designed for clean interfaces and smooth interaction.
 
 ### Load Library
 --[[ Example ]]
-local redzlib = loadstring(game:HttpGet("RAW_GITHUB_LINK"))()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nhat0258/Redz-UI-Library/refs/heads/main/main.lua"))()
