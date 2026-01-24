@@ -1094,6 +1094,8 @@ end
 
 local ScreenGui = Create("ScreenGui", CoreGui, {
 	Name = "redz Library V5",
+    DisplayOrder = 10000, -- ADD THIS TO FIX ZINDEX/DRAG ISSUE
+    ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 }, {
 	Create("UIScale", {
 		Scale = UIScale,
@@ -1769,8 +1771,8 @@ function redzlib:MakeWindow(Configs)
 	local ContainerList = {}
 	function Window:MakeTab(paste, Configs)
 		if type(paste) == "table" then Configs = paste end
-		local TName = Configs[1] or Configs.Title or "Tab!"
-		local TIcon = Configs[2] or Configs.Icon or ""
+		local TName = Configs.Name or Configs.Title or Configs[1] or "Tab"
+		local TIcon = Configs.Icon or Configs[2] or "home"
 		
 		TIcon = redzlib:GetIcon(TIcon)
 		if not TIcon:find("rbxassetid://") or TIcon:gsub("rbxassetid://", ""):len() < 6 then
