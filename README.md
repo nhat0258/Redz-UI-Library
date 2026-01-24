@@ -15,4 +15,5 @@ Built with performance, flexibility, and simplicity in mind.
 
 ## 📦 Installation
 --[[ How Use ? ]]
-local RedzUI = loadstring(game:HttpGet("RAW_GITHUB_LINK"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nhat0258/Redz-UI-Library/refs/heads/main/main.lua"))()
+
